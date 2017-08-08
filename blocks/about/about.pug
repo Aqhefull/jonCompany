@@ -1,0 +1,12 @@
+mixin about(data)
+  +b.SECTION.about#about
+    +e.DIV.container
+        +e.DIV.info
+            h2 <span>We are</span> <br>Creative <br>Team
+            +e.DIV.separator
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            button(class="btn") Read More
+        +e.DIV.images
+            each item in data.items
+                +e.DIV.images-item
+                    img(src=item.link)

@@ -1,0 +1,101 @@
+.client 
+  min-height: 818px
+  width: 100%
+  overflow: hidden
+  position: relative
+  background-color: #2f2f2f
+  display: flex
+  justify-content: center
+  @media #{$_md}
+    display: block
+    &::after
+      +clearfix()
+  &__info
+    min-width: 533px
+    width: 100%
+    display: flex
+    justify-content: flex-end
+    align-items: flex-start
+    @media #{$_md}
+      min-width: auto
+      float: right
+      +col(6)
+      &::after
+        +clearfix()
+    @media #{$_md}
+      float: none
+      width: 100%
+    h3
+      color: #fff
+      margin-bottom: 60px
+    &-container
+        max-width: 400px
+        margin: 135px 0 0 0
+        animation-duration: 2s
+        @media #{$_md}
+          max-width: auto
+          margin: 50px 20px
+        @media #{$xlg}
+          margin: 135px 32px 0 0
+    &-item
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      &:first-child
+        margin-bottom: 95px 
+      &-left
+        span
+          font-size: 80px
+      &-right
+        span
+          display: block
+          text-transform: uppercase
+          font-weight: 900
+          font-size: 17px
+          margin-top: 30px
+        p
+          font-size: 16px
+          line-height: 1.5
+  &__image
+    @media #{$_md}
+      float: left
+      +col(6)
+      &::after
+        +clearfix()
+    @media #{$_xs}
+      float: none
+      width: 100%
+    img
+      display: block
+      @media #{$_md}
+        width: 100%
+  &__comment
+    min-width: 533px
+    width: 100%
+    background-color: #fff
+    @media #{$_md}
+      float: left
+      min-width: auto
+    &-ap
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      max-width: 290px
+      margin: 138px 0 0 40px
+      text-align: center
+      color: #000
+      font-size: 24px
+      animation-duration: 2s
+      @media #{$_md}
+        max-width: 100%
+        margin: 50px 15px
+      @media #{$xlg}
+        margin: 138px 0 0 98px
+      img
+        margin: 0 0 58px
+      span 
+        font-weight: bold
+        font-size: 18px
+        text-transform: uppercase
+        margin-top: 40px

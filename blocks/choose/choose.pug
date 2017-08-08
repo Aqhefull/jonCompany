@@ -1,0 +1,15 @@
+mixin choose(data)
+  +b.SECTION.choose
+    +e.DIV.container
+        +e.DIV.image
+            img(src="./img/choose/image.png")
+        +e.DIV.info
+            h3 <span>Why</span><br>Choose Us
+            each item in data.items
+                +e.DIV.item
+                    +e.DIV.item-left
+                        img(src=item.link)
+                    +e.DIV.item-right
+                        span=item.title
+                        p=item.text
+            

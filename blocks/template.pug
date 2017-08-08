@@ -1,0 +1,90 @@
+include _assets/bemto/bemto
+- set_bemto_settings({ modifier: "--" })
+
+include head/head
+include header/header
+include about/about
+include team/team
+include creative/creative
+include choose/choose
+include services/services
+include client/client
+include footer/footer
+
+
+doctype html
+html(lang="ru")
+	
+	block head
+		head
+			+head({
+				"title": "Company template",
+				"author": "Alexandr Komarevich",
+				"description": "Company template"
+			})
+			
+		+b.BODY.page
+			+e.DIV.wrap
+				block header
+					+header({
+						"left_items": [
+							{
+								"title": "Home",
+								"href": "#header"                   
+							},
+							{
+								"title": "About us",
+								"href": "#about"                   
+							},
+							{
+								"title": "Team",
+								"href": "#team"                   
+							}
+						],
+						"right_items": [
+							{
+								"title": "Services",
+								"href": "#services"                   
+							},
+							{
+								"title": "Our Clients",
+								"href": "#client"                   
+							},
+							{
+								"title": "Contact",
+								"href": "#footer"                   
+							}
+						]
+					})
+				block content
+					div content
+				block footer
+					+footer({
+						"items": [
+							{
+								"link": "./img/footer/email.png",
+								"title": "Email",
+								"text": "free@psdfreebies.com"
+							},
+							{
+								"link": "./img/footer/phone.png",
+								"title": "Call Us!",
+								"text": "+123 456 7890"
+							},
+							{
+								"link": "./img/footer/map.png",
+								"title": "Address",
+								"text": "123, Main Road, New City, My Country 123456"							
+							},
+						]
+					})
+				
+			block vendors
+				// build:js js/vendor.js
+				script( src="libs/jquery/dist/jquery.min.js")
+				script( src="libs/wow/dist/wow.min.js")
+				// endbuild
+			block scripts
+				// build:js js/main.js
+				script( src="js/main.js")
+				// endbuild

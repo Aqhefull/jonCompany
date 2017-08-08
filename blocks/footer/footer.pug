@@ -1,0 +1,27 @@
+mixin footer(data)
+  +b.SECTION.footer#footer
+      +e.DIV.social
+        +e.DIV.container
+          h3 <span>Get</span> in Touch
+          +e.social-icons
+              a(class="mdi mdi-facebook")
+              a(class="mdi mdi-google-plus")
+              a(class="mdi mdi-vk")
+              a(class="mdi mdi-youtube-play")
+              a(class="mdi mdi-linkedin")
+              a(class="mdi mdi-instagram")
+              a(class="mdi mdi-twitter")
+      +e.DIV.contact
+        +e.DIV.contact-container
+          each item in data.items
+              +e.DIV.item
+                  +e.DIV.item-left
+                      img(src=item.link)
+                  +e.DIV.item-right
+                      span=item.title
+                      p=item.text
+      +e.DIV.figure
+        +e.DIV.figure-box
+          +e.DIV.figure-box-content
+            p By
+            a(href="https://aqhefull.github.io/" target="_blank") Alex Komarevich

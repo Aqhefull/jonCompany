@@ -1,0 +1,14 @@
+mixin team(data)
+  +b.SECTION.team#team
+    +e.DIV.container
+        +e.DIV.info
+            h2 <span>Our Best</span><br>Team
+            +e.DIV.separator
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet       
+            button(class="btn") Read More
+        +e.DIV.list
+            each item in data.items
+                +e.DIV.list-item
+                    img(src=item.link)
+                    span john Doe
+                    p Graphic Designer

@@ -1,0 +1,19 @@
+mixin client(data)
+  +b.SECTION.client#client
+    +e.DIV.info
+        +e.DIV.info-container
+            h3 <span>Our</span><br>Client Say
+            each item in data.items
+                +e.DIV.info-item
+                    +e.DIV.info-item-left
+                        span(class="mdi mdi-format-quote-close")
+                    +e.DIV.info-item-right
+                        p=item.text
+                        span=item.autor
+    +e.DIV.image
+        img(src="./img/client/image.png")
+    +e.DIV.comment
+        +e.DIV.comment-ap
+            img(src="./img/client/ap.png")
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+            span John Doe, CEO

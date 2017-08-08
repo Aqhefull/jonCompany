@@ -1,0 +1,80 @@
+.choose 
+  min-height: 822px
+  width: 100%
+  overflow: hidden
+  background-color: #2f2f2f
+  position: relative
+  &__container
+    +container(center, nowrap)
+    align-items: center
+    animation-duration: 2s
+    @media #{$_md}
+      flex-wrap: wrap
+    @media #{$xlg}
+      justify-content: flex-end
+      align-items: flex-end
+  &__image
+    margin: 83px 0
+    @media #{$_md}
+      margin: 83px 0 0 0
+    @media #{$xlg}
+      position: absolute
+      top: 10px
+      left: -14px
+  &__info
+    position: relative
+    margin: 80px 30px 0 40px
+    @media #{$_xs}
+      flex-direction: column
+    @media #{$_md}
+      display: flex
+      justify-content: space-between
+      align-items: center
+      flex-wrap: wrap 
+      margin: 40px 0 0 0 
+    @media #{$xlg}
+      margin: 80px 0 0 0
+      +col(6)
+    h3
+      margin: 0 0 55px 0
+      color: #fff
+    p
+      color: #707070
+      width: 340px 
+      font-size: 18px
+      line-height: 1.3
+  &__item
+    display: inline-flex
+    justify-content: space-between
+    align-items: flex-start
+    margin: 0 0 47px 0
+    @media #{$_md}
+      +col(6)
+    @media #{$_xs}
+      flex-direction: column
+      width: 100%
+    &-left
+      display: flex
+      justify-content: center
+      align-items: center
+      width: 100%
+      padding: 0 64px 0 0
+      @media #{$_md}
+        padding: 0 24px 0 0
+      @media #{$_xs}
+        padding: 0 0 50px 0
+    &-right
+      @media #{$_xs}
+        text-align: center
+      span
+        display: block
+        text-transform: uppercase
+        font-weight: 900
+        font-size: 17px
+        margin-bottom: 15px
+      p
+        font-size: 16px
+        line-height: 1.5
+        white-space: normal
+        @media #{$_md}
+          width: 100%

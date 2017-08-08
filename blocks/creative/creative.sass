@@ -1,0 +1,45 @@
+.creative 
+  min-height: 822px
+  width: 100%
+  overflow: hidden
+  &__container
+    +container()
+    padding: 83px 0
+    position: relative
+  &__info
+    margin: 40px 30px 30px 30px
+    position: relative
+    z-index: 78
+    @media #{$_md}
+      background-color: #fff
+      padding: 30px
+    h3
+      margin: 0 0 30px 0
+    p
+      color: #707070
+      margin: 0 0 76px 0
+      width: 340px 
+      font-size: 18px
+      line-height: 1.7
+      @media #{$_xs}
+        width: 100%
+  &__images
+    display: flex
+    position: absolute
+    left: 454px
+    top: 61px
+    animation-duration: 2s
+    @media #{$_md}
+      left: 0
+    &-left, &-right
+      display: flex
+      flex-direction: column
+      justify-content: flex-start
+      img
+        margin-bottom: 28px
+    &-left
+      align-items: flex-end
+    &-right
+      align-items: flex-start
+      margin-left: 28px
+    

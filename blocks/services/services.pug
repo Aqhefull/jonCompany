@@ -1,0 +1,14 @@
+mixin services(data)
+  +b.SECTION.services#services
+    +e.DIV.info
+        +e.DIV.info-wrap
+            h3 <span>Our</span><br>Best<br> Services
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            button(class="btn") Read More
+    +e.DIV.content
+        +e.DIV.content-inside
+            each item in data.items
+                +e.DIV.item
+                        img(src=item.link)
+                        span=item.title
+                        p=item.text

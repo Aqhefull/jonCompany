@@ -1,0 +1,169 @@
+.header 
+  min-height: 1122px
+  width: 100%
+  background: url('../img/header/background.png')
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+  &__nav
+    @media #{$_xs}
+      a
+        font-size: 11px
+    @media #{$xxs}
+      display: flex
+      justify-content: space-around
+      text-transform: uppercase
+      align-items: center
+    @media #{$md}
+      justify-content: space-between
+      align-items: flex-start
+    &-left
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      @media #{$xxs}
+        flex-direction: column
+      @media #{$sm}
+        +col(5)
+        flex-direction: row
+        justify-content: center
+      @media #{$md}
+        width: auto
+        margin-left: 86px
+      &-item
+        @media #{$sm}
+          margin: 10px 10px
+        @media #{$md}
+          margin: 20px 17px 0 17px
+    &-right
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      @media #{$xxs}
+        flex-direction: column
+      @media #{$sm}
+        +col(5)
+        flex-direction: row
+        justify-content: center
+      @media #{$md}
+        width: auto
+        margin-right: 50px
+      &-item
+        @media #{$sm}
+          margin: 10px 10px
+        @media #{$md}
+          margin: 25px 30px 0 0
+
+  &-logo
+    border: 14px solid $main-orange
+    transform: rotate(45deg)
+    animation-duration: 2s
+    @media #{$xxs}
+      background-color: $main-orange
+      display: flex
+      justify-content: flex-end
+      align-items: center
+      margin-top: -70px
+      width: 80px
+      height: 80px
+    @media #{$sm}
+      display: block
+      background-color: transparent
+      margin-top: -80px
+      width: 130px
+      height: 130px
+    @media #{$md}
+      margin-top: -135px
+      width: 230px
+      height: 230px
+    @media #{$lg}
+      margin-top: -210px
+      width: 355px
+      height: 355px
+    @media #{$xlg}
+      margin-top: -239px
+      width: 450px
+      height: 450px
+    &__content
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      transform: rotate(-45deg)
+      @media #{$xxs}
+        margin: 0 -16px -30px 0
+      @media #{$sm}
+        margin: 70px 0 0 40px
+      @media #{$md}
+        margin: 120px 0 0 90px
+      @media #{$lg}
+        margin: 186px 0 0 135px
+      @media #{$xlg}
+        margin: 236px 0 0 172px
+      img
+        height: auto
+        @media #{$xxs}
+          width: 70px
+        @media #{$sm}
+          width: 80%
+        @media #{$md}
+          width: 60%
+        @media #{$lg}
+          width: 60%
+      &-separator
+        width: 103px
+        height: 4px
+        background-color: #989898
+        @media #{$xxs}
+          display: none
+        @media #{$sm}
+          display: none
+        @media #{$md}
+          display: block
+          margin: 10px 0 10px 0
+        @media #{$lg}
+          margin: 14px 0 20px 0
+        @media #{$xlg}
+          margin: 14px 0 27px 0
+      &-social
+        @media #{$xxs}
+          display: none
+        @media #{$sm}
+          display: none
+        @media #{$md}
+          display: flex
+          justify-content: center
+          align-items: center
+        a
+          display: block
+          border: 3px solid #fff
+          border-radius: 50%
+          transition: all 0.3s
+          cursor: pointer
+          @media #{$md}
+            padding: 4px
+            margin: 0 4px
+            font-size: 16px
+          @media #{$lg}
+            padding: 7px
+            margin: 0 7px
+            font-size: 20px
+          @media #{$xlg}
+            padding: 7px
+            margin: 0 12.4px
+            font-size: 26px
+          &:hover
+            background-color: #fff
+            color: #000
+        
+  &__container
+    +container(center)        
+    flex-direction: column   
+    align-items: center
+    margin-top: 180px   
+    text-align: center
+    padding: 0
+    animation-duration: 2s
+    p   
+      padding: 70px 0
+      max-width: 900px

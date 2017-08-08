@@ -1,0 +1,23 @@
+mixin header(data)
+  +b.SECTION.header#header
+    +e.DIV.nav
+      +e.DIV.nav-left
+        each item in data.left_items
+          +e.DIV.nav-left-item
+            a(href=item.href)= item.title
+      +b.DIV.header-logo
+        +e.DIV.content
+          img(src="./img/header/logo.png")
+          +e.DIV.content-separator
+          +e.DIV.content-social
+            a(class="mdi mdi-facebook")
+            a(class="mdi mdi-google-plus")
+            a(class="mdi mdi-youtube-play")
+      +e.DIV.nav-right
+        each item in data.right_items
+          +e.DIV.nav-right-item
+            a(href=item.href)= item.title
+    +e.DIV.container
+      h1 This is the future of web design.
+      p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporesse cillum dolore eu fugiat nulla eu fugiat nulla pariatur.
+      button(class="btn") Read More
